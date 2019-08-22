@@ -19,12 +19,12 @@ class ViewController: NSViewController, NSWindowDelegate {
         print("1")
         if sender.isVisible {
             print("2")
-            sender.orderOut(nil)
+            sender.orderBack(nil)
             // do something here
             print("3")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 print("4")
-                sender.performClose(nil) //THIS IS THE KEY
+                sender.close()
             }
             print("5")
             return false
